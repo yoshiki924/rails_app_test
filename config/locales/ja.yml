@@ -9,8 +9,27 @@ ja:
         id: ID
         title: タイトル
         price: 価格
+        book_type: 種類
         memo: メモ
   # すべてのモデルで共通して使用するattributesを定義
   attritutes:
     created_at: 作成日
     updated_at: 更新日
+
+  # enum型を定義
+  enums:
+    book:
+      book_type:
+        novel: 小説
+        magazine: 雑誌
+        fairy_tale: 童話
+        mystery: ミステリー
+        detective_story: 探偵物語
+        autobiography: 伝記
+        comic: 漫画
+
+  # サブミットボタンの文言を定義
+  helpers:
+    submit:
+      create: 登録
+      update: 更新
