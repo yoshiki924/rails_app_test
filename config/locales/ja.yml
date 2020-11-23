@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    # モデルはすべてactiverecord以下に定義する
+    models:
+      book: 本
+    # モデルごとに定義したいattrubutesを定義
+    attributes:
+      book:
+        id: ID
+        title: タイトル
+        price: 価格
+        memo: メモ
+  # すべてのモデルで共通して使用するattributesを定義
+  attritutes:
+    created_at: 作成日
+    updated_at: 更新日
