@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :book_type %>
-    <%= select_tag("book[book_type]", options_for_select(Book.book_types.keys.map { |k| [Book.book_types_i18n[k], k] }.unshift(['', '']))) %>
+    <%= select_tag("book[book_type]", options_for_select(Book.book_types.keys.map { |k| [Book.book_types_i18n[k], k] }.unshift(['', '']) , book.book_type)) %>
   </div>
 
   <div class="field">
