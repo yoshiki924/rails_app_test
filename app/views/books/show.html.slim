@@ -1,0 +1,30 @@
+p id="notice"
+  = notice
+
+p
+  strong
+    = t("activerecord.attributes.book.title")
+    |  : 
+  = @book.title
+
+p
+  strong
+    = t("activerecord.attributes.book.price")
+    |  : 
+  = @book.price
+
+p
+  strong
+    = t("activerecord.attributes.book.book_type")
+    |  : 
+  = @book.book_type_i18n
+
+p
+  strong
+    = t("activerecord.attributes.book.memo")
+    |  : 
+  = @book.memo
+
+= link_to 'Edit', edit_book_path(@book)
+|  | 
+= link_to 'Back', books_path
