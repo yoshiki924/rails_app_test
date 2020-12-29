@@ -4,6 +4,7 @@
 
 import * as React from 'react'
 import { render } from 'react-dom'
+import Button from '@material-ui/core/Button'
 
 interface Props {
   name?: string
@@ -16,8 +17,14 @@ const Hello = (props: Props) => {
     text = "Nice to meet you!"
   } = props
 
+  const [count, countUp] = React.useState(0)
+
   return (
-    <div>Hello {name}! {text}</div>
+    <>
+      <div>Hello {name}! {text}</div>
+      <div>count : {count}</div>
+      <Button variant="contained" color="primary" onClick={() => countUp(count + 1)}>Button</Button>
+    </>
   )
 }
 
